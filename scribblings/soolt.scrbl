@@ -1,10 +1,10 @@
 #lang scribble/manual
-@require[@for-label[abstractions
+@require[@for-label["../main.rkt"
                     racket/base]]
 
-@title{abstractions}
+@title{soolt}
 @author{sbj}
 
-@defmodule[abstractions]
+@defmodule[soolt]
 
-Package Description Here
+Exactly what you'd expact!

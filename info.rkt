@@ -1,8 +1,7 @@
 #lang info
-(define collection "abstractions")
+(define collection "soolt")
 (define deps '("base"))
 (define build-deps '("scribble-lib" "racket-doc" "rackunit-lib"))
-(define scribblings '(("scribblings/abstractions.scrbl" ())))
-(define pkg-desc "Description Here")
-(define version "0.0")
-(define pkg-authors '(sbj))
+(define scribblings '(("scribblings/soolt.scrbl" ())))
+(define pkg-desc "Exactly what you'd expect!")
+(define version "0.1")
