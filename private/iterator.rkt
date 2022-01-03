@@ -1,5 +1,17 @@
 #lang racket
 
+(provide
+ iterator?
+ build-iterator
+ list->iterator
+ vector->iterator
+ stream->iterator
+ iterator->list
+ iterator->vector
+ iterator->stream
+ iterator-ref
+ iterator-move)
+
 (require tag "functor.rkt")
 
 (tag unset)
@@ -64,9 +76,12 @@
 (define (vector->iterator xs)
   (iterator (λ (x) (void)) (vector-length xs) 0 xs))
 
-(define (list-iterator xs)
+(define (list->iterator xs)
   (vector->iterator (list->vector xs)))
 
+(define (stream->iterator xs)
+  (build-iterator (stream-length xs)
+    (λ (index) (stream-ref index))))
 
 (module+ test
   (require rackunit)
