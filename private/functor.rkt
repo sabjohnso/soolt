@@ -16,7 +16,7 @@
  extract extend duplicate
 
  gen:comonad-apply comonad-apply?
- extend* lambda/w let/w)
+ zapply extend* lambda/w let/w)
 
 (require
  (for-syntax racket racket/syntax syntax/parse)
