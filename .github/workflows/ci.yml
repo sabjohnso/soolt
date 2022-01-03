@@ -16,9 +16,9 @@ jobs:
           distribution: full
           variant: ${{ matrix.racket-variant }}
           version: ${{ matrix.racket-version }}
-      - name: Installing abstractions and its dependencies
-        run: raco pkg install --no-docs --auto --name abstractions
-      - name: Compiling abstractions and building its docs
-        run: raco setup --check-pkg-deps --unused-pkg-deps abstractions
-      - name: Testing abstractions
-        run: raco test -x -p abstractions
+      - name: Installing soolt and its dependencies
+        run: raco pkg install --no-docs --auto --name soolt
+      - name: Compiling soolt and building its docs
+        run: raco setup --check-pkg-deps --unused-pkg-deps soolt
+      - name: Testing soolt
+        run: raco test -x -p soolt
